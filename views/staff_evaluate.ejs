@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Project Evalution</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/3e1df15e03.js" crossorigin="anonymous"></script>
+
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+
+
+</head>
+
+
+<body>
+  <!-- HEADER -->
+
+  <!-- HEADER1 -->
+
+  <div class="header-1">
+    <nav class="navbar navbar-expand-md ">
+      <a class="navbar-brand" href="">
+        <b>Student Project Evalution</b>
+      </a>
+      <!-- <a class="navbar-brand text-white ml-4" href="/home"><b>Student Project Evalution</b></a> -->
+      <form class="search-box d-flex" style="opacity:0" role="search">
+        <input class="form-control  me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger btn-search" type="submit"><i
+            class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <ul class="navbar-nav log-ins">
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 log_in" href="#">Hello, <%=user.name%> <i
+                class="fa-solid fa-user log-ic"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 log_in" href="/staff_home">Back <i
+              class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- HEADER1 -->
+
+
+  <%- include('project_details') %>
+
+    <div class="container mt-5">
+      <table class="table table-bordered" id="dataTable" cellspacing="0">
+        <thead style="background-color:  rgb(8, 8, 95); color:aliceblue">
+          <tr>
+            <th>BID</th>
+            <th>EID</th>
+            <th>Domain</th>
+            <th>Achievement</th>
+            <th>PO</th>
+            <th>PSO</th>
+            <th>Justification</th>
+            <th>Operation</th>
+          </tr>
+        </thead>
+
+        <tbody style="background-color: rgb(12, 225, 225);">
+
+          <% data.forEach(z => { %>
+
+            <tr>
+              <% if (String(z.user)===String(user._id)) { %>
+
+                <td>
+                  <%= z.BID%>
+                </td>
+                <td>
+                  <%=user.name%>
+                </td>
+                <td>
+                  <%= z.Domain%>
+                </td>
+                <td>
+                  <%= z.Achievement%>
+                </td>
+                <td>
+                  <%= z.PO%>
+                </td>
+                <td>
+                  <%= z.PSO%>
+                </td>
+                <td>
+                  <%= z.Justification%>
+                </td>
+
+                <td>
+                  <form style="display: inline;" action="/delete_evaluate/<%= z.BID%>?_method=DELETE" method="POST">
+                    <button type="submit" class="fa-solid fa-trash-can btns"></button>
+                  </form>
+                </td>
+                <% } %>
+
+            </tr>
+            <% }); %>
+         
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <style>
+      .link {
+        color: rgb(115, 66, 238);
+        margin-left: 1rem;
+        transition: .3s;
+      }
+
+      .link:hover {
+        color: rgb(60, 11, 158);
+        text-decoration: none;
+      }
+
+      .std {
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+      }
+
+      .table {
+        width: 100% !important;
+        margin-left: 0 !important;
+        font-size: 0.9rem;
+      }
+
+      .btns,
+      .btnn {
+        font-size: 0.7rem;
+        width: 90% !important;
+        margin-left: 0 !important;
+        margin-bottom: 6px;
+      }
+
+      button, i {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: blueviolet;
+      }
+
+    </style>
+
+
+
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<div class="container con">
+    <h2 class="mb-4">Project Details</h2>
+    <form action="/project_details" method="post">
+        <table>
+            <tr>
+                <td>
+                    <p>USNs</p><input type="text" name="USN" class="form-control mb-2">
+                </td>
+                <td>
+                    <p>Names</p><input type="text" name="Name" class="form-control mb-2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Batch</p><input type="text" name="BID" class="form-control mb-2">
+                </td>
+                <td>
+                    <p>Domain</p><input type="text" name="Domain" class="form-control mb-2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>PO</p><input type="text" name="PO" class="form-control mb-2">
+            
+                </td>
+                <td>
+                    <p>PSO</p><input type="text" name="PSO" class="form-control mb-2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Enter Achievements</p><textarea name="Achievement" rows="1" class="form-control mb-2"></textarea>
+                </td>
+                <td>
+                    <p>Enter Justification</p><textarea name="Justification" rows="1" class="form-control mb-2"></textarea>
+                </td>
+            </tr>
+        </table>
+        <button type="submit" class="btn btn-block mt-3">Submit</button>
+    </form>
+
+</div>
+<style>
+    .con {
+        background-color: rgb(12, 225, 225);
+        padding: 1.7rem 2rem;
+        margin-top: 2rem;
+        border-radius: 20px;
+    }
+
+    .con form input,
+    .con form select,
+    .con form label,
+    .con form textarea{
+        margin: auto;
+        width: 98%;
+        border-radius: 8px;
+    }
+
+    .con form input::placeholder {
+        color: rgb(58, 58, 58);
+    }
+
+    .btn {
+        border-radius: 17px;
+        width: 40% !important;
+        margin: auto;
+        width: 100% !important;
+        background: rgb(8, 8, 95);
+        color: aliceblue;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .con form label {
+        background-color: rgb(24, 240, 240);
+        border: 1px solid #fff;
+    }
+
+    table p {
+        margin: 0 0 0 10px;
+    }
+</style>

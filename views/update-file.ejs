@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Project Evalution | Update Details</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="../stylesheet" type="text/css" href="css/design.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+
+</head>
+
+<body>
+
+     <!-- HEADER1 -->
+
+     <div class="header-1">
+      <nav class="navbar navbar-expand-md ">
+        <a class="navbar-brand" href="">
+          <b>Student Project Evalution</b>
+        </a>
+        <!-- <a class="navbar-brand text-white ml-4" href="/home"><b>Student Project Evalution</b></a> -->
+        <form class="search-box d-flex" style="opacity:0" role="search">
+          <input class="form-control  me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+  
+        <ul class="navbar-nav log-ins">
+          <li class="nav-item">
+            <a class="nav-link nav-link-1 cart" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-1 log_in" href="/users/logout">Sign Out  <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <!-- HEADER1 -->
+
+
+<div class="container con">
+
+    <h2 class="mb-4">Update Details</h2>
+
+    <form action="/edit/<%= x.Name%>?_method=put" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        
+        <input type="text" value="<%= x.BID%>" name="BID" class="form-control mb-2" placeholder="Enter Your BID - BXX">
+        <input type="text" value="<%= x.Name%>" name="Name" class="form-control mb-2" placeholder="Enter Your Name">
+        <input type="text" value="<%= x.USN%>" name="USN" class="form-control mb-2" placeholder="Enter USN">
+        <input type="text" value="<%= x.Title%>" name="Title" class="form-control mb-2" placeholder="Enter Title">
+        <select name="Type" class="form-control mb-2">
+            <option value="<%= x.Type%>" selected disabled hidden><%= x.Type%></option>
+            <option value="Final Year Project">Final Year Project</option>
+            <option value="Second Year Project">Second Year Project</option>
+          </select>
+          <select name="Subject" class="form-control mb-2">
+            <option value="<%= x.Subject%>" selected disabled hidden><%= x.Subject%></option>
+            <option value="Mobile Application">Mobile Application</option>
+            <option value="Web Application">Web Application</option>
+            <option value="IoT">IoT</option>
+            <option value="Machine Learning">Machine Learning</option>
+          </select>
+          <select name="Guide" class="form-control mb-2">
+            <option value="<%= x.Guide%>" selected disabled hidden><%= x.Guide%></option>
+            <option value="Dr. Gururaj">Dr. Gururaj</option>
+            <option value="Dr. Jitendra">Dr. Jitendra</option>
+            <option value="Mr. Nandu">Mr. Nandu</option>
+          </select>
+        <input type="file" name="Operation" value="<%= x.Operation %>" class="form-control mb-2">
+
+        <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
+
+    </form>
+</div>
+
+
+<style>
+  .con{
+     background-color: rgb(12, 225, 225);
+     padding: 1.7rem 6rem;
+     margin-top: 2rem;
+     width: 70% !important;
+     border-radius: 20px;
+   }
+   .con form input,
+   .con form select{
+    margin: auto;
+     width: 90%;
+     border-radius: 17px;
+     color: rgb(58, 58, 58);
+  }
+  .con form input::placeholder{
+     color: rgb(58, 58, 58);
+  }
+  .btn{
+     border-radius: 17px;
+     width: 90% !important;
+     margin: auto;
+     background: rgb(8, 8, 95)!important;
+  }
+  h2{
+   margin-left: 3rem;
+  }
+</style>
+
+<%- include('./partials/footer.ejs') %>

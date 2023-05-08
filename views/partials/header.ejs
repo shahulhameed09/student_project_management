@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shoe Angadi</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="../stylesheet" type="text/css" href="css/design.css">
+  
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/dataTables.bootstrap4.min.js"></script>
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/3e1df15e03.js" crossorigin="anonymous"></script>
+
+
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+
+
+</head>
+
+
+<body>
+  <!-- HEADER -->
+
+  <!-- HEADER1 -->
+
+  <div class="header-1">
+    <nav class="navbar navbar-expand-md ">
+      <a class="navbar-brand" href="">
+        <img src="/images/company-logo3.png" alt="" width="220" height="65" class="d-inline-block align-text-top">
+      </a>
+      <form class="search-box d-flex" role="search">
+        <input class="form-control  me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <ul class="navbar-nav log-ins">
+        <%  if(isAuthenticated()){ %>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 log_in" href="#">Hello, <%=user.name%> <i class="fa-solid fa-user log-ic"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 cart" href="">Cart &nbsp<i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 log_in" href="/users/logout">Sign Out<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </li>
+        <%  }else{ %>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 log_in" href="/users/login">Log In &nbsp<i class="fa-solid fa-user log-ic"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-1 cart" href="">Cart &nbsp<i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <%  } %>
+
+
+      </ul>
+    </nav>
+  </div>
+  
+
+  <!-- HEADER1 -->

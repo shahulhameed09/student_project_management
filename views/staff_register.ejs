@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="/css/login.css">
+  </head>
+  
+  
+  
+  
+  <body>
+  
+  
+    <div class="container right-panel-active" id="container">
+      <div class="form-container sign-up-container">
+        <form action="/users/register" method="post">
+  
+          <input type="text" name="name" placeholder="Name" required value="<%= typeof name != 'undefined' ? name : '' %>" />
+          <input type="text" name="USN_OR_EID" placeholder="Enter EID" required value="<%= typeof USN_OR_EID != 'undefined' ? USN_OR_EID : '' %>" />
+          <input type="password" name="password1" placeholder="Password" required value="<%= typeof password1 != 'undefined' ? password1 : '' %>" />
+          <input type="password" id="password2" name="password2" placeholder="Confirm Password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+  
+          <button class="btnclick" type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back Staff</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <a href="/users/staff_login"><button class="ghost" id="signIn">Sign In</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+  

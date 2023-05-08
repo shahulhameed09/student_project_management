@@ -1,0 +1,63 @@
+<head>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+  <div class="container -" id="container">
+    <div class="form-container sign-in-container">
+      <form action="/users/staff_login" method="post">
+          <h1>Welcome Back Staff!</h1>
+          <input type="text" name="USN_OR_EID" placeholder="Enter EID" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Log In</button>
+          <a href="#">Forgot your password?</a>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="detail">
+        <h1 style="text-align: center;">Department Events</h1>
+        <pre>
+      2022 All Project Reports
+      2018 Batch Achievements Count
+      2019 Batch Achievements Count
+      2020 Batch Achievements Count
+      Events Organised
+      Research and Student Project
+      Project Mapping
+      Internship
+      AICTE ACTIVITY POINT
+        </pre>
+        <p class="cse">CSE NBA CLOUD</p>
+        <pre>
+      Faculty Research Links
+      Student Internship Certificates
+      GAMA 3D 2022
+        </pre>
+      </div>
+    </div>
+  </div>
+  <style>
+    .form-container {
+      margin-left: 0;
+      width: 40%;
+    }
+    .container {
+      min-height: 500px;
+    }
+    .detail{
+      margin: 3rem 4rem;
+    }
+    .cse{
+      margin-left: 3rem;
+      font-size: 2rem;
+      color: blue;
+    }
+    pre{
+      color: blue;
+    }
+    h1{
+      font-weight: inherit;
+    }
+
+  </style>
+</body>

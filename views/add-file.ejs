@@ -1,0 +1,77 @@
+
+      <div class="container con">
+         <h2 class="mb-4">Add Details</h2>
+         <form action="/add-details" method="post" enctype="multipart/form-data">
+            <table>
+               <tr>
+                  <td><input type="text" name="BID" class="form-control mb-2" placeholder="Enter Your BID - BXX"></td>
+                  <td><input type="text" name="Name" class="form-control mb-2" placeholder="Enter Your Name"></td>
+               </tr>
+               <tr>
+                  <td><input type="text" name="USN" class="form-control mb-2" placeholder="Enter USN"></td>
+                  <td><input type="text" name="Title" class="form-control mb-2" placeholder="Enter Title"></td>
+               </tr>
+               <tr>
+                  <td><select name="Type" class="form-control mb-2">
+                     <option value="" selected disabled hidden>Choose Project Type</option>
+                     <option value="Final Year Project">Final Year Project</option>
+                     <option value="Second Year Project">Second Year Project</option>
+                   </select>
+                   </td>
+                  <td><select name="Guide" class="form-control mb-2">
+                     <option value="" selected disabled hidden>Choose Guide</option>
+                     <option value="Dr. Gururaj">Dr. Gururaj</option>
+                     <option value="Dr. Jitendra">Dr. Jitendra</option>
+                     <option value="Mr. Nandu">Mr. Nandu</option>
+                     <option value="shahul">shahul</option>
+                     <option value="shahul hameed">shahul hameed</option>
+                   </select>
+                   </td>
+               </tr>
+               <tr>
+                  <td>
+                     <select name="Subject" class="form-control mb-2">
+                        <option value="" selected disabled hidden>Choose Subject</option>
+                        <option value="Mobile Application">Mobile Application</option>
+                        <option value="Web Application">Web Application</option>
+                        <option value="IoT">IoT</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                      </select>
+                  </td>
+               <td><input type="file" name="Operation" class="form-control mb-2"></td>
+               </tr>
+            </table>
+            <button type="submit" class="btn btn-block mt-3">Submit</button>
+         </form>
+
+      </div>
+      <style>
+         .con{
+            background-color: rgb(12, 225, 225);
+            padding: 1.7rem 2rem;
+            margin-top: 2rem;
+            border-radius: 20px;
+          }
+          .con form input,
+          .con form select{
+           margin: auto;
+            width: 100%;
+            border-radius: 17px;
+         }
+         .con form input::placeholder{
+            color: rgb(58, 58, 58);
+         }
+         .btn{
+            border-radius: 17px;
+            width: 40% !important;
+            margin: auto;
+            width: 100% !important;
+            background: rgb(8, 8, 95);
+            color: aliceblue;
+         }
+         table{
+            width: 100%;
+         }
+      </style>
+
+      
